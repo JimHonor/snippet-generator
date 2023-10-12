@@ -4,6 +4,7 @@ import { resolve } from "path";
 
 export default defineConfig(({ mode }) => {
   return {
+    base: mode === "development" ? "/" : "/snippet-generator/",
     plugins: [react()],
     build: {
       sourcemap: mode === "development",
